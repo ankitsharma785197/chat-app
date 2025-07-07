@@ -429,3 +429,93 @@ form .name-details .field:first-child{
     font-size: 16px;
     cursor: pointer;
 }
+
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --box-bg: #ffffff;
+  --box-text: #000000;
+  --input-bg: #ffffff;
+  --input-text: #000000;
+  --button-bg: #333333;
+  --button-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --box-bg: #1e1e1e;
+  --box-text: #ffffff;
+  --input-bg: #2a2a2a;
+  --input-text: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+/* Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+  z-index: 9999;
+}
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+  }
+}
+
+/* Wrapper box */
+.wrapper {
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Inputs and Textareas */
+.wrapper input,
+.wrapper select,
+.wrapper textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Placeholder color (optional for better look) */
+.wrapper input::placeholder,
+.wrapper textarea::placeholder {
+  color: #888;
+}
+
+/* Buttons */
+.wrapper button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
