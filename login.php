@@ -5,6 +5,10 @@ if(isset($_SESSION['unique_id'])){
 }
 include_once "header.php";
 ?>
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 <body>
     <div class="wrapper">
     <section class="form login">
@@ -17,8 +21,8 @@ include_once "header.php";
             </div>
             <div class="field input">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Enter password" autocomplete="off" required>
-                <i class="fas fa-eye"></i>
+                <input type="password" name="password" id="password" placeholder="Enter password" autocomplete="off" required>
+                <i class="ri-eye-off-line" id="eyeicon"></i>
             </div>
             <div class="field button">
                 <input type="submit" value="Continue to Chat">
